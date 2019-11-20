@@ -1,4 +1,4 @@
-package model;
+package datn.quanlydoan.model;
 
 import java.io.Serializable;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package model;
+package datn.quanlydoan.model;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -17,24 +17,26 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "Comment")
+@Table(name = "NhiemVu")
 @Data
-public class Comment {
+public class NhiemVu {
 
 	private static final long serialVersionUID = -1000119078147252957L;
+	@Id // Đánh dấu trường này là primary key
+	@GeneratedValue // Tự động tăng giá trị id
+	private Long id;
 
-	@Id
-	@GeneratedValue
-	private long id;
 	@OneToOne
-	@JoinColumn(name = "idBaiDang", referencedColumnName = "id")
-	private BaiDang baiDang;
-	@OneToOne
-	@JoinColumn(name = "idTaiKhoan", referencedColumnName = "id")
-	private TaiKhoan taiKhoan;
-	//
+	@JoinColumn(name = "idDeTai", referencedColumnName = "id")
+	private DeTai deTai;
+	
+	@OneToOne(mappedBy = "nhiemVu")
+	private DanhGia danhGia;
+	
+	private String tenNhiemVu;
 	private String noiDung;
-	private Date thoiGian;
+	private String trangThai;
+	private Date ngayTao;
 	private String file;
 
 }

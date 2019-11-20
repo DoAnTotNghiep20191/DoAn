@@ -1,4 +1,4 @@
-package model;
+package datn.quanlydoan.model;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -30,7 +30,7 @@ public class SinhVien {
 	@GeneratedValue // Tự động tăng giá trị id
 	private Long id;
 
-	private DeTai detai;
+	
 	private int mssv;
 	private String ten;
 	private Date namSinh;
@@ -41,8 +41,7 @@ public class SinhVien {
 																	// primary key "id"
 	private TaiKhoan taiKhoan; // entity duoc link to
 
-	@OneToOne
-	@JoinColumn(name = "idDeTai", referencedColumnName = "id")
+	@OneToOne(mappedBy = "sinhVien")
 	private DeTai deTai;
 
 	@OneToOne

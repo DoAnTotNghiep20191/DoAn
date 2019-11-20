@@ -1,4 +1,4 @@
-package model;
+package datn.quanlydoan.model;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -29,10 +30,10 @@ public class DeTai {
 	private String file;
 	private String trangThai;
 
-	@OneToOne(mappedBy = "deTai") // Khai bao phu thuoc vao thuc the ben phia entity owner
-	private SinhVien sinhVien; // entity link
 	@OneToOne(mappedBy = "deTai")
 	private NhiemVu nhiemVu;
-	
+	@OneToOne
+	@JoinColumn(name = "idSinhVien", referencedColumnName = "id")
+	private SinhVien sinhVien;
 
 }

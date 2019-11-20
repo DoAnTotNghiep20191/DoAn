@@ -1,4 +1,4 @@
-package repository;
+package datn.quanlydoan.repository;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,11 +7,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import model.DeTai;
-import model.TaiKhoan;
+import datn.quanlydoan.model.Comment;
+import datn.quanlydoan.model.TaiKhoan;
 
 
 @Repository
-public interface DetaiRepository extends JpaRepository<DeTai, Long> {
+public interface CommentRepository extends JpaRepository<Comment, Long> {
 
 }

@@ -1,4 +1,4 @@
-package repository;
+package datn.quanlydoan.repository;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import model.BaiDang;
-import model.TaiKhoan;
+import datn.quanlydoan.model.BaiDang;
+import datn.quanlydoan.model.TaiKhoan;
 
 @Repository
 public interface BaiDangRepository extends JpaRepository<BaiDang, Long> {

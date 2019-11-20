@@ -1,4 +1,4 @@
-package model;
+package datn.quanlydoan.model;
 
 import java.io.Serializable;
 
@@ -30,10 +30,10 @@ public class TaiKhoan {
 	// Lien ket bang 1-1 voi cac bang khac thong qua thuc the taiKhoan
 	@OneToOne(mappedBy = "taiKhoan")
 	private SinhVien sinhVien;
+	
 	@OneToOne(mappedBy = "taiKhoan")
 	private GiangVien giangVien;
-	@OneToOne(mappedBy = "taiKhoan")
-	private QuanLy quanLy;
+	
 	@OneToOne(mappedBy = "taiKhoan")
 	private BaiDang baiDang;
 	@OneToOne(mappedBy = "taiKhoan")
