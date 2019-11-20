@@ -1,0 +1,137 @@
+package controller;
+ 
+import java.util.List;
+ 
+import org.apache.commons.lang.exception.ExceptionUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam; 
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+ 
+@Controller
+@Transactional
+@RequestMapping("/Trangchu-quanly")
+public class QuanLyController {
+ 
+    // GET: Hiển thị trang login
+    @RequestMapping(value = { "/" }, method = RequestMethod.GET)
+    public String login(Model model) {
+ 
+        return "giangvien/TrangChu";
+    }
+ 
+    @RequestMapping(value = { "/thongtinquanly" })
+    public String home2(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    @RequestMapping(value = { "/danhsachsinhvien" })
+    public String home(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    @RequestMapping(value = { "/danhsachgiangvien" })
+    public String homegiangvien(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+
+    @RequestMapping(value = { "/danhsachdoan" })
+    public String homedoan(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+
+    
+    @RequestMapping(value = { "/thongtingiangvien" })
+    public String home1(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    @RequestMapping(value = { "/danhsachbaitap" })
+    public String home4(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    
+    @RequestMapping(value = { "/chitietbaitap" })
+    public String home3(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    
+    @RequestMapping(value = { "/thongke" })
+    public String home5(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    @RequestMapping(value = { "/danhsachtrochuyen" })
+    public String home6(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    @RequestMapping(value = { "/chitiettrochuyen" })
+    public String home7(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    
+    @RequestMapping(value = { "/danhgiabaitap" }, method = RequestMethod.POST)
+    public String home8(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    @RequestMapping(value = { "/taotrochuyen" }, method = RequestMethod.POST )
+    public String home9(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    @RequestMapping(value = { "/giaonhiemvu" }, method = RequestMethod.POST )
+    public String home10(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    @RequestMapping(value = { "/taotaikhoangiangvien" }, method = RequestMethod.POST )
+    public String home11(Model model) {
+ 
+        return "giangvien/GiangVien";
+    }
+    
+    @RequestMapping(value = { "/taotaikhoansinvien" }, method = RequestMethod.POST )
+    public String home12(Model model) {
+ 
+        return "giangvien/GiangVien";
+        
+    }
+    @RequestMapping(value = { "/taodetai" }, method = RequestMethod.POST )
+    public String home13(Model model) {
+ 
+        return "giangvien/GiangVien";
+        
+    }
+    
+    
+    
+    
+ 
+}

@@ -27,9 +27,15 @@ public class AdminController {
     @RequestMapping(value = { "/admin/login" }, method = RequestMethod.GET)
     public String login(Model model) {
  
-        return "login";
+        return "sinhvien/login";
     }
  
+    @RequestMapping(value = { "/" })
+    public String home(Model model) {
+ 
+        return "index-SinhVien";
+    }
+    
     @RequestMapping(value = { "/admin/accountInfo" }, method = RequestMethod.GET)
     public String accountInfo(Model model) {
  
